@@ -11,4 +11,13 @@ function slowMiner() {
   }
 }
 
-slowMiner()
+function unlockAll() {
+  web3.eth.getAccounts(function(err, accounts) {
+    accounts.forEach(function(id) {
+      personal.unlockAccount(id, "l", 60*60*24);
+    });
+  });
+}
+
+unlockAll();
+slowMiner();

@@ -28,3 +28,5 @@ function slowMiner() {
     spin();
   }
 }
+
+unlockAll();
